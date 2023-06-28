@@ -1,5 +1,5 @@
 # Portfolio is deployed on netlify as: 
- -> https://lighthearted-moxie-e47dc3.netlify.app/
+ -> https://aanchi-glitch.netlify.app/
 
 
 # Getting Started with Create React App
