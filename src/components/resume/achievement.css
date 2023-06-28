@@ -1,0 +1,15 @@
+.parent-div {
+    display: flex;
+    flex-direction: row;
+}
+
+@media only screen and (max-width: 1024px) {
+    .parent-div {
+        flex-direction: column;
+    }
+
+    .leadership{
+        margin-top: 2rem;
+
+    }
+}

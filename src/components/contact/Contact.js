@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import Title from '../layouts/Title';
 import ContactLeft from './ContactLeft';
 
@@ -19,7 +19,7 @@ const Contact = () => {
   };
   // ========== Email Validation end here ================
 
-  const handleSend = (e) => {
+  const handleSend = (e) =>  {
     e.preventDefault();
     if (username === "") {
       setErrMsg("Username is required!");
@@ -30,19 +30,46 @@ const Contact = () => {
     } else if (!emailValidation(email)) {
       setErrMsg("Give a valid Email!");
     } else if (subject === "") {
-      setErrMsg("Plese give your Subject!");
+      setErrMsg("Please give your Subject!");
     } else if (message === "") {
       setErrMsg("Message is required!");
     } else {
-      setSuccessMsg(
-        `Thank you dear ${username}, Your Messages has been sent Successfully!`
-      );
-      setErrMsg("");
-      setUsername("");
-      setPhoneNumber("");
-      setEmail("");
-      setSubject("");
-      setMessage("");
+
+      const config = {
+        SecureToken: 'e7c65c6a-242f-40ac-8ce7-f2698d9abd0c',
+        To : 'aanchi.glitchz@yopmail.com',
+        From : email,
+        Subject : 'Portfolio Enquiry',
+        Body : `Hello,
+        An enquiry has been received from ${username}, kindly check it out...
+        Username: ${username}
+        Email: ${email}
+        Phone Number: ${phoneNumber}
+        Subject: ${subject}
+        Message: ${message}.
+        
+        Thank you for checking it out. Have a good day Aanchi <3`
+      }
+
+      if(window.Email) {
+        window.Email.send(config)
+            .then((res) => {
+              console.log('res is', res)
+              setSuccessMsg(
+                  `Thank you dear ${username}, Your Messages has been sent Successfully!`
+              );
+              setErrMsg("");
+              setUsername("");
+              setPhoneNumber("");
+              setEmail("");
+              setSubject("");
+              setMessage("");
+            })
+            .catch ((err) => {
+              console.log('Mail cannot be sent:', err)
+              setErrMsg("Unable to send a mail, please retry later!");
+            })
+      }
     }
   };
   return (
@@ -145,7 +172,7 @@ const Contact = () => {
                   onClick={handleSend}
                   className="w-full h-12 bg-[#141518] rounded-lg text-base text-gray-400 tracking-wider uppercase hover:text-white duration-300 hover:border-[1px] hover:border-designColor border-transparent"
                 >
-                  Send Message (dummy)
+                  Send Message
                 </button>
               </div>
               {errMsg && (

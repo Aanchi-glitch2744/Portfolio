@@ -1,6 +1,7 @@
 import React from "react";
 import {motion} from "framer-motion"
 import ResumeCard from "./ResumeCard";
+import './achievement.css'
 
 const Achievement = () => {
     return (
@@ -9,12 +10,13 @@ const Achievement = () => {
             animate={{ opacity: 1, transition: { duration: 0.5 } }}
             className="py-12 font-titleFont flex gap-20"
         >
-            <div>
-                <div className="flex flex-col gap-4">
-                    <p className="text-sm text-designColor tracking-[4px]">2019 - Present</p>
-                    <h2 className="text-4xl font-bold">Achievements</h2>
-                </div>
-                <div className="mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
+            <div className='parent-div'>
+                <div className="mr-8">
+                    <div className="flex flex-col gap-4">
+                        <p className="text-sm text-designColor tracking-[4px]">2019 - Present</p>
+                        <h2 className="text-4xl font-bold">Achievements</h2>
+                    </div>
+                    <div className="mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
                     <ResumeCard
                         title="4th position in Game Dev"
                         subTitle="HackTheNorth Hackaton (Feb 2022)"
@@ -32,13 +34,13 @@ const Achievement = () => {
                         des="Active contributer to the Hactoberfest by GitHub, for 4 years now..."
                     />
                 </div>
-            </div>
-            <div>
-                <div className="flex flex-col gap-4">
+                </div>
+                <div className='leadership' style={{ width: '100%'}} gap-4>
+                    <div className="flex flex-col gap-4">
                     <p className="text-sm text-designColor tracking-[4px]">2019 - Present</p>
                     <h2 className="text-4xl font-bold">Leadership/ Extracurricular</h2>
                 </div>
-                <div className="mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
+                    <div className="mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
                     <ResumeCard
                         title="DilSe Team Member"
                         subTitle="Revfin - ( Sep 2022 - Present)"
@@ -57,6 +59,7 @@ const Achievement = () => {
                         result="LPU Jalandhar, Punjab"
                         des="The training provided by universities in order to prepare people to work in various sectors of the economy or areas of culture."
                     />
+                </div>
                 </div>
             </div>
         </motion.div>
