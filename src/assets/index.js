@@ -6,6 +6,7 @@ import projectThree from "./images/projects/projThree.png";
 import projectFour from "./images/projects/projFour.png";
 import projectFive from "./images/projects/projFive.png";
 import projectSix from "./images/projects/projSix.png";
+import aanchalImg from "./images/aanchal.jpg";
 import testimonialOne from "./images/testmonial/testimonialOne.png";
 import testimonialTwo from "./images/testmonial/testimonialTwo.png";
 import quote from "./images/testmonial/quote.png";
@@ -20,6 +21,7 @@ export {
   projectFour,
   projectFive,
   projectSix,
+  aanchalImg,
   testimonialOne,
   testimonialTwo,
   quote,
