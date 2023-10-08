@@ -1,6 +1,6 @@
 import React from 'react'
 import Title from '../layouts/Title'
-import {projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix} from "../../assets/index";
+import {projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix, jobify} from "../../assets/index";
 import ProjectsCard from './ProjectsCard';
 
 const Projects = () => {
@@ -16,6 +16,13 @@ const Projects = () => {
                 />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-14">
+                <ProjectsCard
+                    title="Jobify Application"
+                    des="A full stack (MERN) tracking application with CRUD Job functionality. Implements Client view, Demo Mode and the Admin view."
+                    src={jobify}
+                    hostedLink='https://jobify-application-428b.onrender.com/'
+                    github='https://github.com/Aanchi-glitch2744/Jobify-Application'
+                />
                 <ProjectsCard
                     title="Hotel Booking App"
                     des="A full stack (MERN) application for booking hotels, with proper API Integration for Client view, and the Admin view."

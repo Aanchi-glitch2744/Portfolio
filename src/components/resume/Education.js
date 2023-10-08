@@ -19,7 +19,7 @@ const Education = () => {
           <ResumeCard
             title="B.Tech in Computer Science, Jalandhar"
             subTitle="Lovely Professional University(2019 - 2023)"
-            result="8.21/10"
+            result="8.19/10"
             des="The training provided by universities in order to prepare people to work in various sectors of the economy or areas of culture."
           />
           <ResumeCard
